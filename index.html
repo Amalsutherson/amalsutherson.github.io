@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amalsutherson M | Backend & Integration Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0B1C2D;
+    color:#E3F2FD;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#0B1C2D;
+    border-bottom:1px solid rgba(255,255,255,0.08);
+    z-index:1000;
+}
+
+nav h2{
+    font-weight:800;
+    color:#4FC3F7;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#E3F2FD;
+    font-size:14px;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#4FC3F7;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 10%;
+    background:linear-gradient(180deg,#0B1C2D,#123A5A);
+}
+
+.hero h1{
+    font-size:52px;
+    font-weight:800;
+}
+
+.hero span{
+    color:#4FC3F7;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:18px;
+    color:#B3E5FC;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 28px;
+    background:#1E88E5;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1565C0;
+}
+
+/* SECTIONS */
+section{
+    padding:100px 8%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:32px;
+    color:#4FC3F7;
+}
+
+/* ABOUT */
+.about p{
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+    text-align:center;
+    color:#B3E5FC;
+}
+
+/* SKILLS */
+.skill-category{
+    margin-bottom:50px;
+}
+
+.skill-category h3{
+    margin-bottom:20px;
+    color:#4FC3F7;
+    font-size:20px;
+    border-left:4px solid #1E88E5;
+    padding-left:10px;
+}
+
+.skill-items{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.skill-item{
+    padding:10px 18px;
+    background:#123A5A;
+    border-radius:4px;
+    font-size:14px;
+    transition:0.3s;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.skill-item:hover{
+    background:#1E88E5;
+}
+
+/* BOX STYLE */
+.project, .cert-box, .intern-box, .exp-box{
+    background:#123A5A;
+    padding:25px;
+    margin-bottom:30px;
+    border-radius:8px;
+    border-left:4px solid #4FC3F7;
+    transition:0.3s;
+}
+
+.project:hover{
+    transform:translateY(-5px);
+}
+
+.cert-box img{
+    width:100%;
+    max-width:400px;
+    margin-top:15px;
+    border-radius:6px;
+}
+
+ul{
+    margin-top:10px;
+    padding-left:20px;
+    line-height:1.8;
+    color:#B3E5FC;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin-bottom:10px;
+    color:#B3E5FC;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#081420;
+    font-size:14px;
+    color:#90CAF9;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:34px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Amal</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certification</a></li>
+        <li><a href="#internship">Internship</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+    <div>
+        <h1>Hi, I'm <span>Amalsutherson M</span></h1>
+        <p>Software Developer | WSO2 Integration & Development Specialist | Joget Developer</p>
+        <a href="resume.pdf" class="btn" download>Download Resume</a>
+    </div>
+</div>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+        Software Developer with 2+ years of experience in Joget (No Code/Low Code) development and enterprise integration solutions. Skilled in BeanShell scripting, workflow design, and application customization in Joget.
+
+Strong hands-on experience in WSO2 Micro Integrator, including Data Services and integration artifacts such as Proxies, Sequences, Endpoints, and APIs. Experienced in API lifecycle management using WSO2 API Manager (Publisher & Developer Portal), including API documentation with Markdown, security implementation, and versioning.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+
+    <div class="skill-category">
+        <h3>Programming Languages</h3>
+        <div class="skill-items">
+            <div class="skill-item">Python</div>
+            <div class="skill-item">Java</div>
+            <div class="skill-item">C++</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">BeanShell</div>
+			<div class="skill-item">PHP</div>
+        </div>
+    </div>
+
+    <div class="skill-category">
+        <h3>Integration & Middleware</h3>
+        <div class="skill-items">
+            <div class="skill-item">WSO2 Micro Integrator</div>
+            <div class="skill-item">WSO2 API Manager</div>
+            <div class="skill-item">Apache Synapse</div>
+            <div class="skill-item">Axis2</div>
+            <div class="skill-item">REST & SOAP</div>
+            <div class="skill-item">Dataservice</div>
+        </div>
+    </div>
+
+    <div class="skill-category">
+        <h3>Databases</h3>
+        <div class="skill-items">
+            <div class="skill-item">MySQL</div>
+            <div class="skill-item">MS SQL Server</div>
+            <div class="skill-item">MongoDB</div>
+            <div class="skill-item">SQL</div>
+        </div>
+    </div>
+</section>
+
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <h3>PPC - Pon Pure Chemical (Joget DX7)</h3>
+        <p>
+Developed and implemented multiple enterprise workflow applications using Joget DX7, including WMS (Inward & Outward), QMS, PMS, TODO & MOM, and Checklist Management systems.
+</p>
+
+<p><strong>Key Contributions:</strong></p>
+<ul>
+  <li>Designed and configured end-to-end workflow processes using Joget Process Builder.</li>
+  <li>Built dynamic forms with validations using Joget Form Builder.</li>
+  <li>Implemented business logic using Java BeanShell scripting.</li>
+  <li>Customized user interfaces with HTML, CSS, and JavaScript.</li>
+  <li>Developed role-based approval workflows and status-driven process flows.</li>
+  <li>Integrated backend databases and external systems using stored procedures and service calls.</li>
+</ul>
+
+<p><strong>Module Highlights:</strong></p>
+<ul>
+  <li><strong>WMS (Inward & Outward):</strong> Automated material entry, lot tracking, dispatch process, and inventory validation workflows.</li>
+  <li><strong>QMS:</strong> Implemented laboratory workflow with multi-level approvals, inspection management, COA generation, CAPA tracking, and audit reporting.</li>
+  <li><strong>PMS:</strong> Created process monitoring workflows with approval hierarchy and activity tracking.</li>
+  <li><strong>TODO & MOM:</strong> Developed task management and meeting tracking system with reminders and status updates.</li>
+  <li><strong>Checklist Management:</strong> Designed configurable compliance checklists with multi-stage approvals.</li>
+</ul>
+    </div>
+
+    <div class="project">
+        <h3>UAB - United Arab Bank (WSO2)</h3>
+<p>
+Designed and implemented enterprise API integrations using WSO2 Micro Integrator (MI) and WSO2 API Manager (APIM) to enable secure and scalable banking system integrations.
+</p>
+
+<ul>
+  <li>Developed and deployed integration services using WSO2 Micro Integrator, including APIs, Proxy Services, Sequences, Endpoints, and Data Services.</li>
+  <li>Implemented message transformations (XML/JSON), routing logic, and service orchestration for core banking integrations.</li>
+  <li>Configured secure communication using OAuth2, JWT, and mutual SSL authentication.</li>
+  <li>Managed API lifecycle using WSO2 API Manager Publisher and Developer Portal.</li>
+  <li>Applied API versioning, throttling policies, and access control for secure API governance.</li>
+  <li>Created and maintained API documentation using Markdown within APIM.</li>
+  <li>Deployed and monitored integration artifacts across environments (Dev, UAT, Production).</li>
+</ul>
+    </div>
+
+    <div class="project">
+    <h3>NITA Uganda (WSO2)</h3>
+    <p>
+    Managed API deployments and designed integration solutions using WSO2 Micro Integrator (MI) and WSO2 API Manager (APIM) for enterprise-level system integrations.
+    </p>
+    <ul>
+        <li>Developed and deployed APIs, Proxy Services, Sequences, Endpoints, and Data Services using WSO2 MI.</li>
+        <li>Implemented message transformation, routing, and orchestration between multiple backend systems.</li>
+        <li>Configured secure APIs using OAuth2, JWT, and role-based access control.</li>
+        <li>Managed API lifecycle with WSO2 APIM Publisher and Developer Portal, including versioning and throttling policies.</li>
+        <li>Created API documentation using Markdown for internal and external developers.</li>
+        <li>Monitored deployed artifacts and performed troubleshooting in dev, UAT, and production environments.</li>
+    </ul>
+</div>
+</section>
+
+<section id="certifications">
+    <h2>Certifications</h2>
+
+    <!-- Google Python -->
+    <div class="cert-box">
+        <h3>Crash Course on Python</h3>
+        <p><strong>Issued by:</strong> Google (Coursera)</p>
+        <p>Completed Python fundamentals and scripting concepts.</p>
+        <a href="https://www.coursera.org/account/accomplishments/verify/GWKQ7G7UX325?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course"
+           target="_blank" class="btn">View Certificate</a>
+    </div>
+
+    <!-- WSO2 Identity Server Developer -->
+    <div class="cert-box">
+        <h3>WSO2 Certified Identity Server Developer – V7</h3>
+        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000B5ZEvYAN"
+           target="_blank" class="btn">View Certificate</a>
+    </div>
+
+    <!-- WSO2 API Manager Developer -->
+    <div class="cert-box">
+        <h3>WSO2 Certified API Manager Developer – V4</h3>
+        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000B5ZDJYA3"
+           target="_blank" class="btn">View Certificate</a>
+    </div>
+
+    <!-- WSO2 Identity Server Practitioner -->
+    <div class="cert-box">
+        <h3>WSO2 Certified Identity Server Practitioner – V7</h3>
+        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000B5ZBhYAN"
+           target="_blank" class="btn">View Certificate</a>
+    </div>
+
+    <!-- WSO2 API Manager Practitioner -->
+    <div class="cert-box">
+        <h3>WSO2 Certified API Manager Practitioner – V4</h3>
+        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000B5Z8TYAV"
+           target="_blank" class="btn">View Certificate</a>
+    </div>
+
+    <!-- WSO2 Micro Integrator Developer -->
+    <div class="cert-box">
+        <h3>WSO2 Certified Micro Integrator Developer – V4</h3>
+        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000ArtgXYAR"
+           target="_blank" class="btn">View Certificate</a>
+    </div>
+
+    <!-- WSO2 Micro Integrator Practitioner -->
+    <div class="cert-box">
+        <h3>WSO2 Certified Micro Integrator Practitioner – V4</h3>
+        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000ArtevYAB"
+           target="_blank" class="btn">View Certificate</a>
+    </div>
+
+</section>
+<section id="internship">
+    <h2>Internship</h2>
+    <div class="intern-box">
+        <h3>Node.js Developer Intern</h3>
+        <p><strong>Company:</strong> Icanio Technologies</p>
+        <p>Worked on backend API development and REST services using Node.js.</p>
+    </div>
+</section>
+
+<section id="experience">
+    <h2>Professional Experience</h2>
+
+    <div class="exp-box">
+        <h3>Internship – Joget Developer</h3>
+        <p><strong>Company:</strong> Impiger Technologies Pvt Ltd</p>
+        <p><strong>Duration:</strong> July 2024 – November 2024</p>
+        <ul>
+            <li>Developed enterprise workflow applications using Joget DX.</li>
+            <li>Customized forms using BeanShell scripting.</li>
+            <li>Integrated MySQL databases.</li>
+        </ul>
+    </div>
+
+    <div class="exp-box">
+        <h3>Trainee Graduate – Joget Developer</h3>
+        <p><strong>Company:</strong> Impiger Technologies Pvt Ltd</p>
+        <p><strong>Duration:</strong> December 2024 – May 2025</p>
+        <ul>
+            <li>Worked on PPC workflow automation project.</li>
+            <li>Developed custom logic using Java.</li>
+        </ul>
+    </div>
+
+    <div class="exp-box">
+        <h3>Trainee Graduate – WSO2 API Developer</h3>
+        <p><strong>Company:</strong> Impiger Technologies Pvt Ltd</p>
+        <p><strong>Duration:</strong> June 2025 – Present</p>
+        <ul>
+            <li>Developed REST APIs using WSO2 API Manager.</li>
+            <li>Implemented integrations using WSO2 Micro Integrator.</li>
+        </ul>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: amalsuthersonbca@gmail.com</p>
+    <p>Phone: 9677599249</p>
+    <p>Location: Coimbatore</p>
+</section>
+
+<footer>
+    © 2026 Amalsutherson M | Backend & Integration Developer
+</footer>
+
+</body>
+</html>
