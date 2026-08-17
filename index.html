@@ -3,451 +3,576 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amalsutherson M | Backend & Integration Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
+<title>Amalsutherson M — Route Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Inter',sans-serif;
-    scroll-behavior:smooth;
-}
+  :root{
+    --bg:#131014;
+    --panel:#1C171C;
+    --panel-2:#221C22;
+    --border:#312931;
+    --text:#F4EFEF;
+    --text-dim:#A99EA4;
+    --text-faint:#6E626A;
 
-body{
-    background:#0B1C2D;
-    color:#E3F2FD;
-}
+    --joget:#FFB100;
+    --mi:#22D3B0;
+    --apim:#9B7BFF;
+    --data:#FF5C7A;
 
-/* NAVBAR */
-nav{
-    position:fixed;
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#0B1C2D;
-    border-bottom:1px solid rgba(255,255,255,0.08);
-    z-index:1000;
-}
+    --display:'Space Grotesk', sans-serif;
+    --mono:'Space Mono', monospace;
+    --body:'Inter', sans-serif;
+  }
 
-nav h2{
-    font-weight:800;
-    color:#4FC3F7;
-}
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--body);
+    line-height:1.65;
+  }
+  a{ color:inherit; }
+  ::selection{ background:var(--joget); color:#131014; }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:30px;
-}
-
-nav ul li a{
+  /* ---------- NAV ---------- */
+  nav{
+    position:fixed; top:0; width:100%; z-index:1000;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 6%;
+    background:rgba(19,16,20,0.88);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--border);
+  }
+  .brand{
+    font-family:var(--display); font-weight:700; font-size:18px;
+    display:flex; align-items:center; gap:9px;
+  }
+  .brand .badge{
+    width:22px; height:22px; border-radius:50%;
+    background:conic-gradient(var(--joget) 0 25%, var(--mi) 0 50%, var(--apim) 0 75%, var(--data) 0 100%);
+  }
+  nav ul{ list-style:none; display:flex; gap:4px; overflow-x:auto; }
+  nav ul li a{
     text-decoration:none;
-    color:#E3F2FD;
-    font-size:14px;
-    transition:0.3s;
-}
+    font-family:var(--mono); font-size:11.5px;
+    color:var(--text-dim);
+    padding:8px 13px;
+    border-radius:20px;
+    white-space:nowrap;
+    display:flex; align-items:center; gap:7px;
+    transition:color .2s, background .2s;
+  }
+  nav ul li a .d{ width:7px; height:7px; border-radius:50%; }
+  nav ul li a:hover{ color:var(--text); background:var(--panel-2); }
 
-nav ul li a:hover{
-    color:#4FC3F7;
-}
+  /* ---------- HERO / MAP ---------- */
+  .hero{
+    min-height:100vh;
+    display:flex; flex-direction:column; justify-content:center;
+    padding:150px 6% 80px;
+    max-width:1280px; margin:0 auto;
+  }
+  .hero-top{
+    display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;
+  }
+  .kicker{
+    font-family:var(--mono); font-size:12px; letter-spacing:0.1em;
+    color:var(--text-faint); margin-bottom:16px;
+    display:flex; align-items:center; gap:10px;
+  }
+  .kicker .live{
+    width:8px; height:8px; border-radius:50%; background:var(--mi);
+    box-shadow:0 0 8px var(--mi);
+    animation:blink 2s ease-in-out infinite;
+  }
+  @keyframes blink{ 0%,100%{opacity:1;} 50%{opacity:0.3;} }
 
-/* HERO */
-.hero{
-    height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:0 10%;
-    background:linear-gradient(180deg,#0B1C2D,#123A5A);
-}
+  .hero h1{
+    font-family:var(--display); font-weight:800;
+    font-size:clamp(38px,5.6vw,66px);
+    line-height:1.03; letter-spacing:-0.01em;
+  }
+  .hero .role{ margin-top:20px; font-size:17px; color:var(--text-dim); max-width:480px; }
+  .hero .role b{ color:var(--text); font-weight:600; }
+  .cta-row{ margin-top:32px; display:flex; gap:14px; flex-wrap:wrap; }
+  .btn{
+    font-family:var(--mono); font-size:12.5px; font-weight:700;
+    padding:13px 22px; border-radius:30px;
+    text-decoration:none; display:inline-flex; align-items:center; gap:8px;
+    transition:transform .2s, opacity .2s;
+  }
+  .btn-solid{ background:var(--text); color:var(--bg); }
+  .btn-solid:hover{ transform:translateY(-2px); }
+  .btn-ghost{ border:1px solid var(--border); color:var(--text); }
+  .btn-ghost:hover{ border-color:var(--text-dim); transform:translateY(-2px); }
 
-.hero h1{
-    font-size:52px;
-    font-weight:800;
-}
+  .map-card{
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:20px;
+  }
+  .map-card .cap{
+    display:flex; justify-content:space-between;
+    font-family:var(--mono); font-size:10px; color:var(--text-faint);
+    margin-bottom:8px; letter-spacing:0.05em;
+  }
+  .map-card svg{ width:100%; height:auto; }
+  .map-card svg text{ font-family:var(--mono); font-size:10px; fill:var(--text-dim); letter-spacing:0.02em; }
+  .map-card svg .hub-label{ font-family:var(--display); font-weight:700; font-size:12px; fill:var(--text); }
 
-.hero span{
-    color:#4FC3F7;
-}
+  .legend{
+    display:flex; flex-wrap:wrap; gap:16px;
+    margin-top:16px; padding-top:16px;
+    border-top:1px solid var(--border);
+  }
+  .legend .item{ display:flex; align-items:center; gap:7px; font-family:var(--mono); font-size:11px; color:var(--text-dim); }
+  .legend .sw{ width:14px; height:4px; border-radius:2px; }
 
-.hero p{
-    margin-top:20px;
-    font-size:18px;
-    color:#B3E5FC;
-}
+  /* ---------- SHEET / SECTION SHELL ---------- */
+  section.stop-section{ max-width:1180px; margin:0 auto; padding:100px 6%; }
+  .head-row{
+    display:flex; align-items:center; gap:16px; margin-bottom:50px; flex-wrap:wrap;
+  }
+  .head-row .pill{
+    font-family:var(--mono); font-weight:700; font-size:11px;
+    padding:6px 13px; border-radius:20px; color:#131014;
+  }
+  .head-row h2{
+    font-family:var(--display); font-weight:700;
+    font-size:clamp(26px,3.4vw,38px);
+  }
+  .head-row .sub{ font-family:var(--mono); font-size:12px; color:var(--text-faint); margin-left:auto; }
 
-.btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:12px 28px;
-    background:#1E88E5;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-    font-weight:600;
-    transition:0.3s;
-}
+  /* ---------- LINE TRACK (used for skills + timeline) ---------- */
+  .line-track{ position:relative; padding-left:46px; }
+  .line-track::before{
+    content:""; position:absolute; left:16px; top:2px; bottom:2px;
+    width:3px; border-radius:2px; background:var(--lc, var(--joget));
+  }
+  .stop{ position:relative; padding-bottom:30px; }
+  .stop:last-child{ padding-bottom:0; }
+  .stop::before{
+    content:""; position:absolute; left:-38px; top:2px;
+    width:13px; height:13px; border-radius:50%;
+    background:var(--bg);
+    border:3px solid var(--lc, var(--joget));
+  }
+  .stop.now::before{ background:var(--lc, var(--joget)); box-shadow:0 0 0 4px rgba(255,255,255,0.06); animation:pulse 2s ease-in-out infinite; }
+  @keyframes pulse{ 0%,100%{ box-shadow:0 0 0 4px rgba(255,255,255,0.06);} 50%{ box-shadow:0 0 0 8px rgba(255,255,255,0.02);} }
+  .stop .tag{
+    font-family:var(--mono); font-size:10px; letter-spacing:0.08em;
+    color:var(--lc, var(--joget)); margin-bottom:4px; display:inline-block;
+  }
+  .stop h3{ font-size:16px; font-weight:600; margin-bottom:2px; }
+  .stop .co{ font-family:var(--mono); font-size:11.5px; color:var(--text-faint); display:block; margin-bottom:8px; }
+  .stop p{ color:var(--text-dim); font-size:14px; }
+  .stop ul{ padding-left:18px; color:var(--text-dim); font-size:14px; line-height:1.85; margin-top:4px; }
+  .stop ul li::marker{ color:var(--text-faint); }
 
-.btn:hover{
-    background:#1565C0;
-}
+  .lines-grid{ display:grid; grid-template-columns:1fr 1fr; gap:56px; }
 
-/* SECTIONS */
-section{
-    padding:100px 8%;
-}
+  /* ---------- ABOUT ---------- */
+  .about-grid{ display:grid; grid-template-columns:1.25fr 1fr; gap:50px; align-items:start; }
+  .about-grid p{ color:var(--text-dim); font-size:15.5px; line-height:1.85; }
+  .about-grid p + p{ margin-top:16px; }
+  .info-card{
+    background:var(--panel); border:1px solid var(--border); border-radius:12px; padding:24px;
+  }
+  .info-card .row{
+    display:flex; justify-content:space-between; padding:11px 0;
+    border-bottom:1px solid var(--border);
+    font-size:13.5px;
+  }
+  .info-card .row:last-child{ border-bottom:none; }
+  .info-card .row span:first-child{ color:var(--text-faint); font-family:var(--mono); font-size:11px; }
+  .info-card .row span:last-child{ color:var(--text); font-weight:500; text-align:right; }
 
-section h2{
-    text-align:center;
-    margin-bottom:60px;
-    font-size:32px;
-    color:#4FC3F7;
-}
+  /* ---------- PROJECTS AS TERMINI ---------- */
+  .terminus{
+    background:var(--panel); border:1px solid var(--border); border-radius:14px;
+    padding:32px; margin-bottom:24px;
+  }
+  .terminus-top{ display:flex; align-items:center; gap:14px; margin-bottom:16px; flex-wrap:wrap; }
+  .route-badge{
+    width:44px; height:44px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--display); font-weight:800; font-size:13px; color:#131014;
+    flex-shrink:0;
+  }
+  .terminus h3{ font-family:var(--display); font-size:20px; font-weight:700; }
+  .terminus .connects{
+    margin-left:auto; font-family:var(--mono); font-size:10.5px; color:var(--text-faint);
+  }
+  .terminus > p{ color:var(--text-dim); font-size:14.5px; margin-bottom:16px; }
+  .terminus strong{
+    display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--text-faint); margin:16px 0 8px;
+  }
+  .terminus ul{ padding-left:20px; color:var(--text-dim); font-size:14px; line-height:1.85; }
+  .terminus ul li::marker{ color:var(--text-faint); }
 
-/* ABOUT */
-.about p{
-    max-width:900px;
-    margin:auto;
-    line-height:1.8;
-    text-align:center;
-    color:#B3E5FC;
-}
+  /* ---------- CERTIFICATIONS AS INTERCHANGES ---------- */
+  .interchange-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px; }
+  .interchange{
+    background:var(--panel); border:1px solid var(--border); border-radius:12px;
+    padding:22px; display:flex; gap:16px; align-items:flex-start;
+  }
+  .ring-icon{ position:relative; width:38px; height:38px; flex-shrink:0; margin-top:2px; }
+  .ring-icon span{
+    position:absolute; border-radius:50%; border:2px solid;
+    top:0; left:0; width:100%; height:100%;
+  }
+  .ring-icon span:nth-child(2){ transform:scale(0.62) translate(18%,-14%); }
+  .interchange h3{ font-size:14.5px; font-weight:600; line-height:1.4; margin-bottom:4px; }
+  .interchange .iss{ font-family:var(--mono); font-size:10.5px; color:var(--text-faint); display:block; margin-bottom:8px; }
+  .interchange a{ font-family:var(--mono); font-size:11px; color:var(--mi); text-decoration:none; }
+  .interchange a:hover{ text-decoration:underline; }
 
-/* SKILLS */
-.skill-category{
-    margin-bottom:50px;
-}
+  /* ---------- CONTACT / END OF LINE ---------- */
+  .end-card{
+    background:var(--panel); border:1px solid var(--border); border-radius:16px;
+    padding:44px; text-align:center;
+  }
+  .end-card .stamp{
+    font-family:var(--mono); font-size:11px; color:var(--text-faint);
+    letter-spacing:0.1em; margin-bottom:18px;
+  }
+  .end-card h2{ font-family:var(--display); font-size:clamp(26px,4vw,40px); font-weight:800; margin-bottom:28px; }
+  .end-fields{ display:flex; justify-content:center; gap:40px; flex-wrap:wrap; }
+  .end-fields .f{ text-align:left; }
+  .end-fields label{ display:block; font-family:var(--mono); font-size:10px; color:var(--text-faint); letter-spacing:0.08em; margin-bottom:6px; }
+  .end-fields a, .end-fields span{ font-family:var(--display); font-size:18px; font-weight:600; text-decoration:none; }
+  .end-fields a:hover{ color:var(--joget); }
 
-.skill-category h3{
-    margin-bottom:20px;
-    color:#4FC3F7;
-    font-size:20px;
-    border-left:4px solid #1E88E5;
-    padding-left:10px;
-}
+  footer{
+    text-align:center; padding:30px 6%;
+    font-family:var(--mono); font-size:11px; color:var(--text-faint);
+    border-top:1px solid var(--border);
+  }
 
-.skill-items{
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
-}
-
-.skill-item{
-    padding:10px 18px;
-    background:#123A5A;
-    border-radius:4px;
-    font-size:14px;
-    transition:0.3s;
-    border:1px solid rgba(255,255,255,0.05);
-}
-
-.skill-item:hover{
-    background:#1E88E5;
-}
-
-/* BOX STYLE */
-.project, .cert-box, .intern-box, .exp-box{
-    background:#123A5A;
-    padding:25px;
-    margin-bottom:30px;
-    border-radius:8px;
-    border-left:4px solid #4FC3F7;
-    transition:0.3s;
-}
-
-.project:hover{
-    transform:translateY(-5px);
-}
-
-.cert-box img{
-    width:100%;
-    max-width:400px;
-    margin-top:15px;
-    border-radius:6px;
-}
-
-ul{
-    margin-top:10px;
-    padding-left:20px;
-    line-height:1.8;
-    color:#B3E5FC;
-}
-
-/* CONTACT */
-.contact{
-    text-align:center;
-}
-
-.contact p{
-    margin-bottom:10px;
-    color:#B3E5FC;
-}
-
-/* FOOTER */
-footer{
-    text-align:center;
-    padding:25px;
-    background:#081420;
-    font-size:14px;
-    color:#90CAF9;
-}
-
-@media(max-width:768px){
-    .hero h1{
-        font-size:34px;
-    }
-}
+  @media(max-width:900px){
+    .hero-top{ grid-template-columns:1fr; }
+    .about-grid{ grid-template-columns:1fr; }
+    .lines-grid{ grid-template-columns:1fr; gap:44px; }
+  }
+  @media(max-width:560px){
+    section.stop-section{ padding:70px 5.5%; }
+    .terminus{ padding:24px 20px; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{ animation:none !important; transition:none !important; }
+  }
 </style>
 </head>
-
 <body>
 
 <nav>
-    <h2>Amal</h2>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certification</a></li>
-        <li><a href="#internship">Internship</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+  <div class="brand"><span class="badge"></span>Amalsutherson M</div>
+  <ul>
+    <li><a href="#about"><span class="d" style="background:var(--joget)"></span>About</a></li>
+    <li><a href="#skills"><span class="d" style="background:var(--mi)"></span>Skills</a></li>
+    <li><a href="#projects"><span class="d" style="background:var(--apim)"></span>Projects</a></li>
+    <li><a href="#certifications"><span class="d" style="background:var(--data)"></span>Certified</a></li>
+    <li><a href="#timeline"><span class="d" style="background:var(--joget)"></span>Route</a></li>
+    <li><a href="#contact"><span class="d" style="background:var(--mi)"></span>Contact</a></li>
+  </ul>
 </nav>
 
-<div class="hero">
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-top">
     <div>
-        <h1>Hi, I'm <span>Amalsutherson M</span></h1>
-        <p>Software Developer | WSO2 Integration & Development Specialist | Joget Developer</p>
-        <a href="resume.pdf" class="btn" download>Download Resume</a>
+      <div class="kicker"><span class="live"></span>SYSTEM MAP — LIVE</div>
+      <h1>Every system<br>has a route in.</h1>
+      <p class="role">I'm Amalsutherson M — a software developer who spends most days routing data between systems that were never built to talk: <b>Joget</b> workflows on one end, <b>WSO2</b> integration and API management on the other.</p>
+      <div class="cta-row">
+        <a href="resume.pdf" class="btn btn-solid" download>Download résumé</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
     </div>
-</div>
 
-<section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-        Software Developer with 2+ years of experience in Joget (No Code/Low Code) development and enterprise integration solutions. Skilled in BeanShell scripting, workflow design, and application customization in Joget.
+    <div class="map-card">
+      <div class="cap"><span>NETWORK OVERVIEW</span><span>4 LINES · 1 INTERCHANGE</span></div>
+      <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg">
+        <path d="M40,60 L150,60 L230,140 L280,140" stroke="var(--joget)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M280,20 L280,140" stroke="var(--mi)" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M440,60 L340,60 L280,140" stroke="var(--apim)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M280,280 L280,140" stroke="var(--data)" stroke-width="4" fill="none" stroke-linecap="round"/>
 
-Strong hands-on experience in WSO2 Micro Integrator, including Data Services and integration artifacts such as Proxies, Sequences, Endpoints, and APIs. Experienced in API lifecycle management using WSO2 API Manager (Publisher & Developer Portal), including API documentation with Markdown, security implementation, and versioning.
-    </p>
+        <circle cx="40" cy="60" r="5" fill="var(--bg)" stroke="var(--joget)" stroke-width="3"/>
+        <text x="40" y="42">JOGET</text>
+        <circle cx="150" cy="60" r="5" fill="var(--bg)" stroke="var(--joget)" stroke-width="3"/>
+
+        <circle cx="280" cy="20" r="5" fill="var(--bg)" stroke="var(--mi)" stroke-width="3"/>
+        <text x="280" y="14" text-anchor="middle">WSO2 MI</text>
+
+        <circle cx="440" cy="60" r="5" fill="var(--bg)" stroke="var(--apim)" stroke-width="3"/>
+        <text x="440" y="42" text-anchor="end">WSO2 APIM</text>
+        <circle cx="340" cy="60" r="5" fill="var(--bg)" stroke="var(--apim)" stroke-width="3"/>
+
+        <circle cx="280" cy="280" r="5" fill="var(--bg)" stroke="var(--data)" stroke-width="3"/>
+        <text x="280" y="298" text-anchor="middle">DATA</text>
+
+        <circle cx="280" cy="140" r="11" fill="var(--panel)" stroke="var(--text)" stroke-width="2.5"/>
+        <circle cx="280" cy="140" r="5" fill="var(--text)"/>
+        <text class="hub-label" x="280" y="168" text-anchor="middle">INTEGRATION</text>
+      </svg>
+      <div class="legend">
+        <div class="item"><span class="sw" style="background:var(--joget)"></span>Joget / low-code</div>
+        <div class="item"><span class="sw" style="background:var(--mi)"></span>WSO2 Micro Integrator</div>
+        <div class="item"><span class="sw" style="background:var(--apim)"></span>WSO2 API Manager</div>
+        <div class="item"><span class="sw" style="background:var(--data)"></span>Data & backend</div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="skills">
-    <h2>Technical Skills</h2>
-
-    <div class="skill-category">
-        <h3>Programming Languages</h3>
-        <div class="skill-items">
-            <div class="skill-item">Python</div>
-            <div class="skill-item">Java</div>
-            <div class="skill-item">C++</div>
-            <div class="skill-item">JavaScript</div>
-            <div class="skill-item">BeanShell</div>
-			<div class="skill-item">PHP</div>
-        </div>
+<!-- ABOUT -->
+<section class="stop-section" id="about">
+  <div class="head-row">
+    <span class="pill" style="background:var(--joget)">ABOUT</span>
+    <h2>Who's operating the line</h2>
+  </div>
+  <div class="about-grid">
+    <div>
+      <p>Two-plus years building on Joget, a no-code/low-code platform — writing the BeanShell logic, form validation, and workflow rules that turn a paper process into a running application.</p>
+      <p>Alongside that, hands-on experience in WSO2 Micro Integrator — proxies, sequences, endpoints, and data services that move information between systems that were never built to talk to each other — plus managing the full API lifecycle in WSO2 API Manager: publishing, Markdown documentation, security, and versioning.</p>
     </div>
-
-    <div class="skill-category">
-        <h3>Integration & Middleware</h3>
-        <div class="skill-items">
-            <div class="skill-item">WSO2 Micro Integrator</div>
-            <div class="skill-item">WSO2 API Manager</div>
-            <div class="skill-item">Apache Synapse</div>
-            <div class="skill-item">Axis2</div>
-            <div class="skill-item">REST & SOAP</div>
-            <div class="skill-item">Dataservice</div>
-        </div>
+    <div class="info-card">
+      <div class="row"><span>ROLE</span><span>Integration & Low-Code Dev</span></div>
+      <div class="row"><span>EXPERIENCE</span><span>2+ years</span></div>
+      <div class="row"><span>CURRENT STOP</span><span>Impiger Technologies</span></div>
+      <div class="row"><span>BASE</span><span>Coimbatore, IN</span></div>
+      <div class="row"><span>STATUS</span><span>Open to work</span></div>
     </div>
-
-    <div class="skill-category">
-        <h3>Databases</h3>
-        <div class="skill-items">
-            <div class="skill-item">MySQL</div>
-            <div class="skill-item">MS SQL Server</div>
-            <div class="skill-item">MongoDB</div>
-            <div class="skill-item">SQL</div>
-        </div>
-    </div>
+  </div>
 </section>
 
+<!-- SKILLS AS LINES -->
+<section class="stop-section" id="skills">
+  <div class="head-row">
+    <span class="pill" style="background:var(--mi)">SKILLS</span>
+    <h2>Lines I run</h2>
+    <span class="sub">3 LINES · 16 STOPS</span>
+  </div>
 
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-        <h3>PPC - Pon Pure Chemical (Joget DX7)</h3>
-        <p>
-Developed and implemented multiple enterprise workflow applications using Joget DX7, including WMS (Inward & Outward), QMS, PMS, TODO & MOM, and Checklist Management systems.
-</p>
-
-<p><strong>Key Contributions:</strong></p>
-<ul>
-  <li>Designed and configured end-to-end workflow processes using Joget Process Builder.</li>
-  <li>Built dynamic forms with validations using Joget Form Builder.</li>
-  <li>Implemented business logic using Java BeanShell scripting.</li>
-  <li>Customized user interfaces with HTML, CSS, and JavaScript.</li>
-  <li>Developed role-based approval workflows and status-driven process flows.</li>
-  <li>Integrated backend databases and external systems using stored procedures and service calls.</li>
-</ul>
-
-<p><strong>Module Highlights:</strong></p>
-<ul>
-  <li><strong>WMS (Inward & Outward):</strong> Automated material entry, lot tracking, dispatch process, and inventory validation workflows.</li>
-  <li><strong>QMS:</strong> Implemented laboratory workflow with multi-level approvals, inspection management, COA generation, CAPA tracking, and audit reporting.</li>
-  <li><strong>PMS:</strong> Created process monitoring workflows with approval hierarchy and activity tracking.</li>
-  <li><strong>TODO & MOM:</strong> Developed task management and meeting tracking system with reminders and status updates.</li>
-  <li><strong>Checklist Management:</strong> Designed configurable compliance checklists with multi-stage approvals.</li>
-</ul>
+  <div class="lines-grid">
+    <div class="line-track" style="--lc:var(--joget)">
+      <div class="stop"><span class="tag">LINE 1</span><h3>Languages</h3><p>Python, Java, C++, JavaScript, BeanShell, PHP</p></div>
     </div>
 
-    <div class="project">
-        <h3>UAB - United Arab Bank (WSO2)</h3>
-<p>
-Designed and implemented enterprise API integrations using WSO2 Micro Integrator (MI) and WSO2 API Manager (APIM) to enable secure and scalable banking system integrations.
-</p>
-
-<ul>
-  <li>Developed and deployed integration services using WSO2 Micro Integrator, including APIs, Proxy Services, Sequences, Endpoints, and Data Services.</li>
-  <li>Implemented message transformations (XML/JSON), routing logic, and service orchestration for core banking integrations.</li>
-  <li>Configured secure communication using OAuth2, JWT, and mutual SSL authentication.</li>
-  <li>Managed API lifecycle using WSO2 API Manager Publisher and Developer Portal.</li>
-  <li>Applied API versioning, throttling policies, and access control for secure API governance.</li>
-  <li>Created and maintained API documentation using Markdown within APIM.</li>
-  <li>Deployed and monitored integration artifacts across environments (Dev, UAT, Production).</li>
-</ul>
+    <div class="line-track" style="--lc:var(--mi)">
+      <div class="stop"><span class="tag">LINE 2</span><h3>Integration & middleware</h3><p>WSO2 Micro Integrator, WSO2 API Manager, Apache Synapse, Axis2, REST & SOAP, Data Services</p></div>
     </div>
 
-    <div class="project">
-    <h3>NITA Uganda (WSO2)</h3>
-    <p>
-    Managed API deployments and designed integration solutions using WSO2 Micro Integrator (MI) and WSO2 API Manager (APIM) for enterprise-level system integrations.
-    </p>
+    <div class="line-track" style="--lc:var(--data)">
+      <div class="stop"><span class="tag">LINE 3</span><h3>Databases</h3><p>MySQL, MS SQL Server, MongoDB, SQL</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS AS TERMINI -->
+<section class="stop-section" id="projects">
+  <div class="head-row">
+    <span class="pill" style="background:var(--apim)">PROJECTS</span>
+    <h2>Terminus stations</h2>
+  </div>
+
+  <div class="terminus">
+    <div class="terminus-top">
+      <div class="route-badge" style="background:var(--joget)">PPC</div>
+      <h3>Pon Pure Chemical</h3>
+      <span class="connects">CONNECTS · JOGET LINE</span>
+    </div>
+    <p>Built and shipped multiple enterprise workflow applications end to end — WMS (inward &amp; outward), QMS, PMS, TODO &amp; MOM, and checklist management, all in Joget DX7.</p>
+    <strong>Key contributions</strong>
     <ul>
-        <li>Developed and deployed APIs, Proxy Services, Sequences, Endpoints, and Data Services using WSO2 MI.</li>
-        <li>Implemented message transformation, routing, and orchestration between multiple backend systems.</li>
-        <li>Configured secure APIs using OAuth2, JWT, and role-based access control.</li>
-        <li>Managed API lifecycle with WSO2 APIM Publisher and Developer Portal, including versioning and throttling policies.</li>
-        <li>Created API documentation using Markdown for internal and external developers.</li>
-        <li>Monitored deployed artifacts and performed troubleshooting in dev, UAT, and production environments.</li>
+      <li>Designed end-to-end workflow processes using Joget Process Builder</li>
+      <li>Built dynamic forms with validation using Joget Form Builder</li>
+      <li>Implemented business logic in Java BeanShell scripting</li>
+      <li>Customized interfaces with HTML, CSS, and JavaScript</li>
+      <li>Developed role-based approval and status-driven process flows</li>
+      <li>Integrated backend databases and external systems via stored procedures and service calls</li>
     </ul>
-</div>
+    <strong>Module highlights</strong>
+    <ul>
+      <li><b>WMS</b> — automated material entry, lot tracking, dispatch, inventory validation</li>
+      <li><b>QMS</b> — lab workflow with multi-level approvals, inspections, COA generation, CAPA tracking, audit reporting</li>
+      <li><b>PMS</b> — process monitoring with approval hierarchy and activity tracking</li>
+      <li><b>TODO & MOM</b> — task management and meeting tracking with reminders and status updates</li>
+      <li><b>Checklist management</b> — configurable compliance checklists with multi-stage approval</li>
+    </ul>
+  </div>
+
+  <div class="terminus">
+    <div class="terminus-top">
+      <div class="route-badge" style="background:var(--mi)">UAB</div>
+      <h3>United Arab Bank</h3>
+      <span class="connects">CONNECTS · WSO2 MI + APIM</span>
+    </div>
+    <p>Designed and implemented enterprise API integrations using WSO2 Micro Integrator and API Manager to connect core banking systems securely and at scale.</p>
+    <ul>
+      <li>Built and deployed APIs, proxy services, sequences, endpoints, and data services in WSO2 MI</li>
+      <li>Implemented XML/JSON message transformation, routing, and service orchestration for core banking</li>
+      <li>Secured communication with OAuth2, JWT, and mutual SSL</li>
+      <li>Managed the API lifecycle through APIM Publisher and Developer Portal</li>
+      <li>Applied versioning, throttling policies, and access control for governance</li>
+      <li>Wrote and maintained API documentation in Markdown within APIM</li>
+      <li>Deployed and monitored artifacts across Dev, UAT, and Production</li>
+    </ul>
+  </div>
+
+  <div class="terminus">
+    <div class="terminus-top">
+      <div class="route-badge" style="background:var(--data)">NIT</div>
+      <h3>NITA Uganda</h3>
+      <span class="connects">CONNECTS · WSO2 MI + APIM</span>
+    </div>
+    <p>Managed API deployments and designed integration solutions using WSO2 Micro Integrator and API Manager for enterprise-level system integration.</p>
+    <ul>
+      <li>Developed and deployed APIs, proxy services, sequences, endpoints, and data services</li>
+      <li>Implemented message transformation, routing, and orchestration between backend systems</li>
+      <li>Secured APIs with OAuth2, JWT, and role-based access control</li>
+      <li>Managed lifecycle via APIM Publisher and Developer Portal, including versioning and throttling</li>
+      <li>Documented APIs in Markdown for internal and external developers</li>
+      <li>Monitored deployed artifacts and troubleshot across dev, UAT, and production</li>
+    </ul>
+  </div>
 </section>
 
-<section id="certifications">
-    <h2>Certifications</h2>
+<!-- CERTIFICATIONS AS INTERCHANGES -->
+<section class="stop-section" id="certifications">
+  <div class="head-row">
+    <span class="pill" style="background:var(--data)">CERTIFIED</span>
+    <h2>Interchange stations</h2>
+  </div>
 
-    <!-- Google Python -->
-    <div class="cert-box">
+  <div class="interchange-grid">
+    <div class="interchange">
+      <div class="ring-icon"><span style="border-color:var(--joget)"></span><span style="border-color:var(--mi)"></span></div>
+      <div>
         <h3>Crash Course on Python</h3>
-        <p><strong>Issued by:</strong> Google (Coursera)</p>
-        <p>Completed Python fundamentals and scripting concepts.</p>
-        <a href="https://www.coursera.org/account/accomplishments/verify/GWKQ7G7UX325?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course"
-           target="_blank" class="btn">View Certificate</a>
+        <span class="iss">Google · via Coursera</span>
+        <a href="https://www.coursera.org/account/accomplishments/verify/GWKQ7G7UX325?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course" target="_blank" rel="noopener">Verify →</a>
+      </div>
     </div>
-
-    <!-- WSO2 Identity Server Developer -->
-    <div class="cert-box">
+    <div class="interchange">
+      <div class="ring-icon"><span style="border-color:var(--apim)"></span><span style="border-color:var(--data)"></span></div>
+      <div>
         <h3>WSO2 Certified Identity Server Developer – V7</h3>
-        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000B5ZEvYAN"
-           target="_blank" class="btn">View Certificate</a>
+        <span class="iss">WSO2</span>
+        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000B5ZEvYAN" target="_blank" rel="noopener">Verify →</a>
+      </div>
     </div>
-
-    <!-- WSO2 API Manager Developer -->
-    <div class="cert-box">
+    <div class="interchange">
+      <div class="ring-icon"><span style="border-color:var(--mi)"></span><span style="border-color:var(--apim)"></span></div>
+      <div>
         <h3>WSO2 Certified API Manager Developer – V4</h3>
-        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000B5ZDJYA3"
-           target="_blank" class="btn">View Certificate</a>
+        <span class="iss">WSO2</span>
+        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000B5ZDJYA3" target="_blank" rel="noopener">Verify →</a>
+      </div>
     </div>
-
-    <!-- WSO2 Identity Server Practitioner -->
-    <div class="cert-box">
+    <div class="interchange">
+      <div class="ring-icon"><span style="border-color:var(--data)"></span><span style="border-color:var(--joget)"></span></div>
+      <div>
         <h3>WSO2 Certified Identity Server Practitioner – V7</h3>
-        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000B5ZBhYAN"
-           target="_blank" class="btn">View Certificate</a>
+        <span class="iss">WSO2</span>
+        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000B5ZBhYAN" target="_blank" rel="noopener">Verify →</a>
+      </div>
     </div>
-
-    <!-- WSO2 API Manager Practitioner -->
-    <div class="cert-box">
+    <div class="interchange">
+      <div class="ring-icon"><span style="border-color:var(--mi)"></span><span style="border-color:var(--joget)"></span></div>
+      <div>
         <h3>WSO2 Certified API Manager Practitioner – V4</h3>
-        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000B5Z8TYAV"
-           target="_blank" class="btn">View Certificate</a>
+        <span class="iss">WSO2</span>
+        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000B5Z8TYAV" target="_blank" rel="noopener">Verify →</a>
+      </div>
     </div>
-
-    <!-- WSO2 Micro Integrator Developer -->
-    <div class="cert-box">
+    <div class="interchange">
+      <div class="ring-icon"><span style="border-color:var(--apim)"></span><span style="border-color:var(--joget)"></span></div>
+      <div>
         <h3>WSO2 Certified Micro Integrator Developer – V4</h3>
-        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000ArtgXYAR"
-           target="_blank" class="btn">View Certificate</a>
+        <span class="iss">WSO2</span>
+        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000ArtgXYAR" target="_blank" rel="noopener">Verify →</a>
+      </div>
     </div>
-
-    <!-- WSO2 Micro Integrator Practitioner -->
-    <div class="cert-box">
+    <div class="interchange">
+      <div class="ring-icon"><span style="border-color:var(--data)"></span><span style="border-color:var(--mi)"></span></div>
+      <div>
         <h3>WSO2 Certified Micro Integrator Practitioner – V4</h3>
-        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000ArtevYAB"
-           target="_blank" class="btn">View Certificate</a>
+        <span class="iss">WSO2</span>
+        <a href="https://certification.wso2.com/certificate/CID-05051527/a09VM00000ArtevYAB" target="_blank" rel="noopener">Verify →</a>
+      </div>
     </div>
-
-</section>
-<section id="internship">
-    <h2>Internship</h2>
-    <div class="intern-box">
-        <h3>Node.js Developer Intern</h3>
-        <p><strong>Company:</strong> Icanio Technologies</p>
-        <p>Worked on backend API development and REST services using Node.js.</p>
-    </div>
+  </div>
 </section>
 
-<section id="experience">
-    <h2>Professional Experience</h2>
+<!-- TIMELINE AS ROUTE -->
+<section class="stop-section" id="timeline">
+  <div class="head-row">
+    <span class="pill" style="background:var(--joget)">ROUTE</span>
+    <h2>The route so far</h2>
+  </div>
 
-    <div class="exp-box">
-        <h3>Internship – Joget Developer</h3>
-        <p><strong>Company:</strong> Impiger Technologies Pvt Ltd</p>
-        <p><strong>Duration:</strong> July 2024 – November 2024</p>
-        <ul>
-            <li>Developed enterprise workflow applications using Joget DX.</li>
-            <li>Customized forms using BeanShell scripting.</li>
-            <li>Integrated MySQL databases.</li>
-        </ul>
+  <div class="line-track" style="--lc:var(--apim)">
+    <div class="stop">
+      <span class="tag">FIRST STOP</span>
+      <h3>Node.js Developer Intern</h3>
+      <span class="co">Icanio Technologies</span>
+      <p>Backend API development and REST services using Node.js.</p>
     </div>
 
-    <div class="exp-box">
-        <h3>Trainee Graduate – Joget Developer</h3>
-        <p><strong>Company:</strong> Impiger Technologies Pvt Ltd</p>
-        <p><strong>Duration:</strong> December 2024 – May 2025</p>
-        <ul>
-            <li>Worked on PPC workflow automation project.</li>
-            <li>Developed custom logic using Java.</li>
-        </ul>
+    <div class="stop">
+      <span class="tag">JUL 2024 – NOV 2024</span>
+      <h3>Internship — Joget Developer</h3>
+      <span class="co">Impiger Technologies Pvt Ltd</span>
+      <ul>
+        <li>Developed enterprise workflow applications using Joget DX</li>
+        <li>Customized forms using BeanShell scripting</li>
+        <li>Integrated MySQL databases</li>
+      </ul>
     </div>
 
-    <div class="exp-box">
-        <h3>Trainee Graduate – WSO2 API Developer</h3>
-        <p><strong>Company:</strong> Impiger Technologies Pvt Ltd</p>
-        <p><strong>Duration:</strong> June 2025 – Present</p>
-        <ul>
-            <li>Developed REST APIs using WSO2 API Manager.</li>
-            <li>Implemented integrations using WSO2 Micro Integrator.</li>
-        </ul>
+    <div class="stop">
+      <span class="tag">DEC 2024 – MAY 2025</span>
+      <h3>Trainee Graduate — Joget Developer</h3>
+      <span class="co">Impiger Technologies Pvt Ltd</span>
+      <ul>
+        <li>Worked on the PPC workflow automation project</li>
+        <li>Developed custom logic using Java</li>
+      </ul>
     </div>
+
+    <div class="stop now">
+      <span class="tag">JUN 2025 – NOW SERVING</span>
+      <h3>Trainee Graduate — WSO2 API Developer</h3>
+      <span class="co">Impiger Technologies Pvt Ltd</span>
+      <ul>
+        <li>Developed REST APIs using WSO2 API Manager</li>
+        <li>Implemented integrations using WSO2 Micro Integrator</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>Email: amalsuthersonbca@gmail.com</p>
-    <p>Phone: 9677599249</p>
-    <p>Location: Coimbatore</p>
+<!-- CONTACT / END OF LINE -->
+<section class="stop-section" id="contact">
+  <div class="end-card">
+    <div class="stamp">● END OF LINE — ALL PASSENGERS PLEASE CONNECT HERE</div>
+    <h2>Let's route something together.</h2>
+    <div class="end-fields">
+      <div class="f"><label>Email</label><a href="mailto:amalsuthersonbca@gmail.com">amalsuthersonbca@gmail.com</a></div>
+      <div class="f"><label>Phone</label><a href="tel:+919677599249">+91 96775 99249</a></div>
+      <div class="f"><label>Location</label><span>Coimbatore, IN</span></div>
+    </div>
+  </div>
 </section>
 
-<footer>
-    © 2026 Amalsutherson M | Backend & Integration Developer
-</footer>
+<footer>© 2026 Amalsutherson M — Route Map v1</footer>
 
 </body>
 </html>
